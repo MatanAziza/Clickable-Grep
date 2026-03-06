@@ -34,7 +34,6 @@ if __name__=="__main__":
             url_list.append(f"file://{path}")
         else:
             url_list.append(f'file://{os.getcwd()}/{path}')
-    print("\n".join(url_list))
     gen = [file_path[file_path.index(folder)+len(folder):] for file_path in gen] # Path from requested folder
     if not gen:
         print("\033[0;31mL'élément cherché n'existe pas dans le dossier et sous-dossiers!\033[1;37m")
