@@ -17,11 +17,10 @@ if __name__=="__main__":
     if args[1] == '--help':
         print('help')
         sys.exit(0)
-    where_to_search = input("What's the folder you want to look into?\n") if one_arg else args[2] # Where you want to search
+    where_to_search = os.getcwd() if one_arg else args[2] # Where you want to search
     folder: str = ""
     tab = where_to_search.split('/')
     folder = tab[-2] if not tab[-1] else tab[-1]
-    where_to_search = f'/home/{os.getlogin()}/{where_to_search[2:]}' if one_arg else where_to_search # Final path where to search
     os.system("touch files.txt")
     os.system(f"grep -rnw --include=*.py --include=*.c '{where_to_search}/' -e '.*{args[1]}.*'| sed 's/$/ 1/' >> files.txt")
     file = open("files.txt", "r")

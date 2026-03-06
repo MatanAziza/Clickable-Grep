@@ -1,6 +1,6 @@
 # Clickable-Grep
 
-This small code allows you to grep easily (on Linux) from your terminal into a folder and display hyperlinks to the found files.
+This small python program allows you to grep easily (on Linux) from your terminal into a folder and display hyperlinks to the found files.
 
 ## Installation
 
@@ -41,13 +41,25 @@ python3 find_files.py arg_1
 ### Result
 
 ```terminal
-<span style="color: green">File n°1: GardenGuardian/ex4/ft_raise_errors.py</span>
-<span style="color: green">File n°2: CodeCultivation/ex4/ft_garden_security.py</span>
-<span style="color: green">File n°3: GardenGuardian/ex0/ft_first_exception.py</span>
-<span style="color: green">File n°4: CodeCultivation/ex5/ft_plant_types.py</span>
-<span style="color: green">File n°5: GardenGuardian/ex2/ft_custom_errors.py</span>
-<span style="color: green">File n°6: GardenGuardian/ex3/ft_finally_block.py</span>
-<span style="color: green">File n°7: CodeCultivation/ex0/ft_garden_intro.py</span>
-<span style="color: green">File n°8: GardenGuardian/ex5/ft_garden_management.py</span>
+File n°1: GardenGuardian/ex4/ft_raise_errors.py
+File n°2: CodeCultivation/ex4/ft_garden_security.py
+File n°3: GardenGuardian/ex0/ft_first_exception.py
+File n°4: CodeCultivation/ex5/ft_plant_types.py
+File n°5: GardenGuardian/ex2/ft_custom_errors.py
+File n°6: GardenGuardian/ex3/ft_finally_block.py
+```
+
+- 2: Provide the argument you're looking for, as well as the path you want to look into.
+
+### Command
+
+```bash
+python3 find_files.py arg_1 path
+```
+
+### Result
+
+```terminal
+Same result as 1st option.
 ```
 
