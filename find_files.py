@@ -28,7 +28,12 @@ if __name__=="__main__":
     file.close()
     os.system("rm files.txt")
     gen = list(set([file_path[:file_path.index(":")] for file_path in list_files[:-1]])) # List of unique path from /home
-    url_list = [f"file://{path}" for path in gen]
+    url_list = []
+    for path in gen:
+        if '/home' in path:
+            url_list.append(f"file://{path}")
+        else:
+            url_list.append(f'file://{os.getcwd()}/{path}')
     gen = [file_path[file_path.index(folder)+len(folder):] for file_path in gen] # Path from requested folder
     if not gen:
         print("\033[0;31mL'élément cherché n'existe pas dans le dossier et sous-dossiers!\033[1;37m")
